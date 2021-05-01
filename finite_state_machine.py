@@ -32,7 +32,7 @@ class FSM:
             (newState, cargo) = handler(cargo)
             print('Reached', newState)
             if newState.upper() in self.endStates:
-                print('Final state', newState)
+                print('Success!', newState)
                 print(cargo)
                 break
             else:
