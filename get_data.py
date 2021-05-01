@@ -24,12 +24,12 @@ def parser_fasta(filename):
                 seq.append(line)
         if name: yield (name, ''.join(seq))
 
-def read_fasta(filename):
+def read_fasta(filename, pos = 1):
     sequence = []
     with open(filename) as fp:
         for name, seq in parser_fasta(fp):
             sequence.append(seq)
-    return sequence[1]
+    return sequence[pos]
 
 def prior_nucleotide(sequence, molecule = 'dna'):
     '''
