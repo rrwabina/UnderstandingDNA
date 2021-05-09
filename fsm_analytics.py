@@ -11,6 +11,7 @@ def read_dna(filename, pos = 1):
     First state of the finite state machine
     '''
     dna_sequence = get_data.read_fasta(filename)
+    
     if dna_sequence == dna_sequence:
         newState = 'Extract Bases' 
     return (newState, dna_sequence)
